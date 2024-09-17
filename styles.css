@@ -1,0 +1,62 @@
+html, body {
+    background-color: rgb(113, 193, 22);
+    color: rgb(0, 0, 0);
+    font-family: Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    font-size: 48px
+  }
+  
+  .container {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    height: 100vh; 
+  }  
+
+h1 {
+    color: rgb(49, 11, 186);
+}
+
+p {
+    
+    font-weight: bold;
+    font-size: 16px;
+    color: blue;
+}
+nav {
+    text-indent: 20px;
+    text-shadow: 2px 2px 4px #aaa;  
+    text-align: center;
+    font-weight: bold; 
+  }
+  v {
+    text-indent: 20px;
+    text-shadow: 2px 2px 4px #aaa;  
+    text-align: center;
+    font-weight: bold; 
+    font-weight: bold;
+    font-size: 32px;
+    color: rgb(0, 0, 0);
+}
+article{
+    text-indent: 20px;
+    text-shadow: 2px 2px 4px #b53838;  
+    text-align: center;
+    font-weight: bold; 
+    font-weight: bold;
+    font-size: 32px;
+    color: rgb(0, 0, 0);
+}
+/* screens 768pxand more */
+@media (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+/* screens 1024px and more */
+@media (min-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+}
