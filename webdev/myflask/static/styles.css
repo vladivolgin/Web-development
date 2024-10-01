@@ -1,0 +1,165 @@
+/* Общие стили */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #003366;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+/* Навигация */
+nav ul {
+  list-style: none;
+  text-align: center;
+  padding: 10px;
+  background-color: #002244;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Форма поиска */
+#search-section {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+#search-section h2 {
+  margin-bottom: 15px;
+}
+
+#search-form {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+#search-form input, #search-form button {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#search-form button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#search-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Раздел с отелями */
+#hotels-section {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.hotel {
+  display: inline-block;
+  width: 30%;
+  margin: 0 15px;
+  text-align: left;
+  background-color: #f9f9f9;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hotel img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.hotel h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.hotel p {
+  font-size: 1rem;
+}
+
+.hotel button {
+  background-color: #28a745;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.hotel button:hover {
+  background-color: #218838;
+}
+
+/* Раздел с отзывами */
+#reviews-section {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.review {
+  background-color: #f9f9f9;
+  padding: 15px;
+  margin: 10px;
+  display: inline-block;
+  width: 30%;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review p {
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.review cite {
+  font-size: 0.9rem;
+  color: #666;
+  display: block;
+  margin-top: 10px;
+}
+
+/* Подвал */
+footer {
+  background-color: #002244;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}

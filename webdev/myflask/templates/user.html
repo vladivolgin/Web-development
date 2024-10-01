@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>User Profile</title>
+</head>
+<body>
+    <h1>User Profile: {{ username }}</h1>
+    <p>Welcome to the profile of {{ username }}!</p>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+    </nav>
+    <footer>
+      <p>&copy; 2024 Hotel Booking. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
