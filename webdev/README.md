@@ -14,4 +14,4 @@ This project is a hotel booking application built with **Flask** and **SQLAlchem
 
 ## Running the app
 
-- python3 app.py
+- **python3 app.py**
