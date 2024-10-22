@@ -10,7 +10,7 @@ This project is a hotel booking application built with **Flask** and **SQLAlchem
 - **Flask**
 - **Flask-SQLAlchemy**
 - **Flask-WTF**
-- **SQLite** (or any other database of your choice)
+- **SQLite** 
 
 ## Running the app
 
