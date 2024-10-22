@@ -1,4 +1,4 @@
-/* Общие стили */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -19,7 +19,7 @@ header h1 {
   font-size: 2.5rem;
 }
 
-/* Навигация */
+
 nav ul {
   list-style: none;
   text-align: center;
@@ -43,7 +43,7 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
-/* Форма поиска */
+
 #search-section {
   background-color: #fff;
   padding: 20px;
@@ -80,7 +80,7 @@ nav ul li a:hover {
   background-color: #0056b3;
 }
 
-/* Раздел с отелями */
+
 #hotels-section {
   background-color: #fff;
   padding: 20px;
@@ -126,7 +126,7 @@ nav ul li a:hover {
   background-color: #218838;
 }
 
-/* Раздел с отзывами */
+
 #reviews-section {
   background-color: #fff;
   padding: 20px;
@@ -156,7 +156,7 @@ nav ul li a:hover {
   margin-top: 10px;
 }
 
-/* Подвал */
+
 footer {
   background-color: #002244;
   color: #fff;
