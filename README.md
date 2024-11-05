@@ -37,7 +37,8 @@ This project is built using the following technologies:
 - **Backend:** Python
 - **Version Control:** Git & GitHub
 
-- File Structure
+## File Structure
+
 myflask/
 │
 ├── app.py              # Main application file
@@ -55,7 +56,8 @@ myflask/
     └── images/
 
 
-Usage
+## Usage
+
 Home Page: Navigate to the home page to start browsing or creating bookings.
 Create a Booking: Select "Create a New Booking" to open the booking form.
 Edit a Booking: Select a booking and click "Edit" to modify details.
