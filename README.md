@@ -41,17 +41,17 @@ This project is built using the following technologies:
 
 myflask/
 │
-├── app.py              # Main application file
-├── requirements.txt    # Python dependencies
-├── .env                # Environment variables (optional)
-├── templates/          # HTML files for Flask routes
+├── app.py
+├── requirements.txt   
+├── .env                
+├── templates/         
 │   ├── home.html
 │   ├── about.html
 │   ├── booking_confirm_delete.html
 │   ├── booking_form.html
 │   ├── user_profile.html
 │   └── booking_list.html
-└── static/             # CSS, images, and other static files
+└── static/             
     ├── styles.css
     └── images/
 
