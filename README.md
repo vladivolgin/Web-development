@@ -42,8 +42,11 @@ This project is built using the following technologies:
 myflask/
 │
 ├── app.py
+
 ├── requirements.txt   
-├── .env                
+
+├── .env 
+
 ├── templates/         
 │   ├── home.html
 │   ├── about.html
