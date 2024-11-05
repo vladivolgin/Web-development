@@ -47,15 +47,24 @@ myflask/
 
 ├── .env 
 
-├── templates/         
+├── templates/   
+
 │   ├── home.html
+
 │   ├── about.html
+
 │   ├── booking_confirm_delete.html
+
 │   ├── booking_form.html
+
 │   ├── user_profile.html
+
 │   └── booking_list.html
-└── static/             
+
+└── static/       
+
     ├── styles.css
+    
     └── images/
 
 
