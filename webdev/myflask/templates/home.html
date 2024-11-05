@@ -19,24 +19,27 @@
             <li><a href="{{ url_for('booking_create') }}">Create a New Booking</a></li>
         </ul>
     </nav>
-    <section id="search-section">
-        <h2>Find your perfect stay</h2>
-        <form id="search-form">
-            <label for="location">Location:</label>
-            <input type="text" id="location" name="location" placeholder="Enter a city or hotel name">
-
-            <label for="check-in">Check-in:</label>
-            <input type="date" id="check-in" name="check-in">
-
-            <label for="check-out">Check-out:</label>
-            <input type="date" id="check-out" name="check-out">
-
-            <label for="guests">Guests:</label>
-            <input type="number" id="guests" name="guests" min="1" max="10">
-
-            <button type="submit">Search</button>
-        </form>
-    </section>
+    <section id="search-section" style="background: linear-gradient(135deg, #4a90e2, #34568B); padding: 40px; color: #fff; text-align: center; border-radius: 8px; max-width: 600px; margin: 0 auto;">
+      <h2 style="margin-bottom: 20px;">Find your perfect stay</h2>
+      <form id="search-form" style="display: grid; gap: 15px;">
+          
+          <label for="location" style="font-size: 18px;">Location:</label>
+          <input type="text" id="location" name="location" placeholder="Enter a city or hotel name" style="padding: 10px; font-size: 16px; border-radius: 5px; border: 1px solid #ddd;">
+          
+          <label for="check-in" style="font-size: 18px;">Check-in:</label>
+          <input type="date" id="check-in" name="check-in" style="padding: 10px; font-size: 16px; border-radius: 5px; border: 1px solid #ddd;">
+          
+          <label for="check-out" style="font-size: 18px;">Check-out:</label>
+          <input type="date" id="check-out" name="check-out" style="padding: 10px; font-size: 16px; border-radius: 5px; border: 1px solid #ddd;">
+          
+          <label for="guests" style="font-size: 18px;">Guests:</label>
+          <input type="number" id="guests" name="guests" min="1" max="10" style="padding: 10px; font-size: 16px; border-radius: 5px; border: 1px solid #ddd;">
+          
+          <button type="submit" style="padding: 12px 20px; font-size: 18px; background-color: #FF6347; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s;">
+              Search
+          </button>
+      </form>
+  </section>
     <footer>
         <p>&copy; 2024 Hotel Booking. All rights reserved.</p>
     </footer>
