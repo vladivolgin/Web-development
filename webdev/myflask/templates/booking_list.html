@@ -4,7 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Bookings</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff; 
+            color: #333333; 
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #004080; 
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #ffffff; 
+        }
+
+        nav {
+            text-align: center;
+            background-color: #003366; 
+            padding: 15px;
+        }
+
+        nav a {
+            color: #ffffff; 
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+        }
+
+        nav a:hover {
+            text-decoration: underline; 
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 800px;
+            background-color: #f9f9f9; 
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 15px 0;
+            padding: 10px;
+            background-color: #e6f7ff; 
+            color: #333;
+            border-radius: 5px;
+        }
+
+        li a {
+            color: #0074d9; 
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        li a:hover {
+            text-decoration: underline; 
+        }
+
+        footer {
+            text-align: center;
+            background-color: #003366; 
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+            color: #ffffff; 
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -30,8 +120,8 @@
             {% endfor %}
         </ul>
     </section>
+    <footer>
+        <p>&copy; 2024 Hotel Booking. All rights reserved.</p>
+    </footer>
 </body>
-<footer>
-    <p>&copy; 2024 Hotel Booking. All rights reserved.</p>
-</footer>
 </html>
