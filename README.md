@@ -38,9 +38,7 @@ This project is built using the following technologies:
 - **Version Control:** Git & GitHub
 
 - File Structure
-bash
-Копировать код
-hotel-booking/
+myflask/
 │
 ├── app.py              # Main application file
 ├── requirements.txt    # Python dependencies
