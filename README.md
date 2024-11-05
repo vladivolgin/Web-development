@@ -63,9 +63,9 @@ myflask/
 
 └── static/       
 
-    ├── styles.css
+├── styles.css
     
-    └── images/
+└── images/
 
 
 ## Usage
