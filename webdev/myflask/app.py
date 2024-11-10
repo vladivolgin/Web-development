@@ -7,7 +7,7 @@ from wtforms.validators import DataRequired
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SECRET_KEY'] = '111'  # Необходимо для работы Flask-WTF
+app.config['SECRET_KEY'] = '111'  
 db = SQLAlchemy(app)
 
 # Route for the homepage
