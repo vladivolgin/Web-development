@@ -89,18 +89,20 @@ pip install -r requirements.txt
 
 2. Run database migrations:
    
-´´´
+```
 flask db upgrade
-´´´
+```
 4. Start the application:
    
-   Option 1: Using Flask run
+ Option 1: Using Flask run
+   ```
 flask run
-   
-   Option 2: Using Python directly
+  ```
+ Option 2: Using Python directly
+ ```
 python3 app.py
    
-   
+```   
 
 
 Contact
