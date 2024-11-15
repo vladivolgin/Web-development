@@ -80,8 +80,9 @@ Delete a Booking: Select "Delete" on any booking to remove it.
 
 1. Clone the repository: https://github.com/vladivolgin/Web-development
 2. Install dependencies:
+```
 pip install -r requirements.txt
-
+```
 
 ## Running the Application
 
