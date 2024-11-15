@@ -23,10 +23,11 @@ Create Booking: Form to add a new booking with essential details (user name, hot
 Edit Booking: Modify existing booking details.
 User Profiles: Each user has a profile page with their booking history.
 
-Prerequisites
-Make sure you have the following installed:
+## Requirements
 
-Python 3.8+
+- Python 3.7+
+- PostgreSQL
+- pip
 ---
 
 ## 🛠️ Technologies Used
@@ -74,6 +75,32 @@ Home Page: Navigate to the home page to start browsing or creating bookings.
 Create a Booking: Select "Create a New Booking" to open the booking form.
 Edit a Booking: Select a booking and click "Edit" to modify details.
 Delete a Booking: Select "Delete" on any booking to remove it.
+
+## Installation
+
+1. Clone the repository: https://github.com/vladivolgin/Web-development
+2. Install dependencies:
+pip install -r requirements.txt
+
+
+## Running the Application
+
+1. Ensure your PostgreSQL database is running.
+
+2. Run database migrations:
+   
+´´´
+flask db upgrade
+´´´
+4. Start the application:
+   
+   Option 1: Using Flask run
+flask run
+   
+   Option 2: Using Python directly
+python3 app.py
+   
+   
 
 
 Contact
