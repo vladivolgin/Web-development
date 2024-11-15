@@ -1,22 +1,25 @@
 import os
+from dotenv import load_dotenv
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import FlaskForm
 from wtforms import StringField, DateField, SubmitField
 from wtforms.validators import DataRequired
 
+load_dotenv()
+
 app = Flask(__name__)
 
 
-database_url = os.environ.get('DATABASE_URL', 'postgresql://hotel_booking_6dnw_user:YklQMWYXhOhHzDmkvnnRpsk32P27exHY@dpg-csri0gl6l47c73ff6evg-a.oregon-postgres.render.com/hotel_booking_6dnw')
 
-
-if 'sslmode=require' not in database_url:
-    database_url += '?sslmode=require'
+database_url = os.getenv('DATABASE_URL')
+if database_url and database_url.startswith("postgres://"):
+    database_url = database_url.replace("postgres://", "postgresql://", 1)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = database_url
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SECRET_KEY'] = '111'  
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+
 db = SQLAlchemy(app)
 
 # Route for the homepage
@@ -102,9 +105,9 @@ def booking_delete(id):
 def db_test():
     try:
         db.session.execute('SELECT 1')
-        return 'Подключение к базе данных успешно!'
+        return 'Connected to database'
     except Exception as e:
-        return f'Ошибка подключения к базе данных: {str(e)}'
+        return f'Error: {str(e)}'
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False, port=5001)
