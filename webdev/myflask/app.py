@@ -6,7 +6,15 @@ from wtforms import StringField, DateField, SubmitField
 from wtforms.validators import DataRequired
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
+
+
+database_url = os.environ.get('DATABASE_URL', 'postgresql://hotel_booking_6dnw_user:YklQMWYXhOhHzDmkvnnRpsk32P27exHY@dpg-csri0gl6l47c73ff6evg-a.oregon-postgres.render.com/hotel_booking_6dnw')
+
+
+if 'sslmode=require' not in database_url:
+    database_url += '?sslmode=require'
+
+app.config['SQLALCHEMY_DATABASE_URI'] = database_url
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = '111'  
 db = SQLAlchemy(app)
@@ -43,17 +51,14 @@ class BookingForm(FlaskForm):
     check_out = DateField('Check-out Date', format='%Y-%m-%d', validators=[DataRequired()])
     submit = SubmitField('Submit')
 
-
 @app.before_request
 def create_tables():
     db.create_all()
-
 
 @app.route('/bookings')
 def booking_list():
     bookings = Booking.query.all()
     return render_template('booking_list.html', bookings=bookings)
-
 
 @app.route('/bookings/create', methods=['GET', 'POST'])
 def booking_create():
@@ -70,7 +75,6 @@ def booking_create():
         return redirect(url_for('booking_list'))
     return render_template('booking_form.html', form=form)
 
-
 @app.route('/bookings/<int:id>/edit', methods=['GET', 'POST'])
 def booking_update(id):
     booking = Booking.query.get_or_404(id)
@@ -84,7 +88,6 @@ def booking_update(id):
         return redirect(url_for('booking_list'))
     return render_template('booking_form.html', form=form, booking=booking)
 
-
 @app.route('/bookings/<int:id>/delete', methods=['GET', 'POST'])
 def booking_delete(id):
     booking = Booking.query.get_or_404(id)
@@ -94,9 +97,14 @@ def booking_delete(id):
         return redirect(url_for('booking_list'))
     return render_template('booking_confirm_delete.html', booking=booking)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+
+@app.route('/db-test')
+def db_test():
+    try:
+        db.session.execute('SELECT 1')
+        return 'Подключение к базе данных успешно!'
+    except Exception as e:
+        return f'Ошибка подключения к базе данных: {str(e)}'
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))  
-    app.run(host='0.0.0.0', port=port, debug=True)
+    app.run(debug=True)
